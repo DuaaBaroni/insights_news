@@ -7,8 +7,7 @@ import 'package:insights_news/core/functions/navigate.dart';
 import 'package:insights_news/core/services/local_storage.dart';
 import 'package:insights_news/core/utils/colors.dart';
 import 'package:insights_news/core/utils/style.dart';
-import 'package:insights_news/features/profile/presentation/view/profile_view.dart';
-
+import 'package:insights_news/features/view/profile/presentation/view/profile_view.dart';
 
 class HomeHeader extends StatefulWidget {
   const HomeHeader({
@@ -43,15 +42,14 @@ class _HomeHeaderState extends State<HomeHeader> {
             ),
             Text(
               'Have A Nice Day !',
-              style: getBodyStyle( color: AppColors.grey
-              ),
+              style: getBodyStyle(color: AppColors.grey),
             ),
           ],
         ),
         const Spacer(),
         InkWell(
           onTap: () {
-            navigateTo  (context,  ProfileView());
+            navigateTo(context, ProfileView());
           },
           child: CircleAvatar(
             radius: 22,
@@ -64,4 +62,3 @@ class _HomeHeaderState extends State<HomeHeader> {
     );
   }
 }
-

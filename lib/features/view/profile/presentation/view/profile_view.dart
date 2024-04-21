@@ -7,7 +7,7 @@ import 'package:gap/gap.dart';
 import 'package:insights_news/core/services/local_storage.dart';
 import 'package:insights_news/core/utils/colors.dart';
 import 'package:insights_news/core/utils/style.dart';
-import 'package:insights_news/features/upload/presentation/view/upload_view.dart';
+import 'package:insights_news/features/view/upload/presentation/view/upload_view.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key});
@@ -41,7 +41,10 @@ class _ProfileViewState extends State<ProfileView> {
                     onTap: () {},
                     child: CircleAvatar(
                         radius: 20,
-                        child:  Icon(Icons.camera_alt_rounded,color: AppColors.green,)),
+                        child: Icon(
+                          Icons.camera_alt_rounded,
+                          color: AppColors.green,
+                        )),
                   ),
                 )
               ],
@@ -66,8 +69,12 @@ class _ProfileViewState extends State<ProfileView> {
                   child: CircleAvatar(
                     radius: 18,
                     backgroundColor: AppColors.green,
-                    child:
-                        CircleAvatar(radius: 17, child:  Icon(Icons.edit, color: AppColors.green,)),
+                    child: CircleAvatar(
+                        radius: 17,
+                        child: Icon(
+                          Icons.edit,
+                          color: AppColors.green,
+                        )),
                   ),
                 ),
               ],

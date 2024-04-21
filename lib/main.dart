@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:insights_news/core/services/local_storage.dart';
 import 'package:insights_news/core/utils/colors.dart';
+import 'package:insights_news/features/controller/news_cubit.dart';
 
 import 'package:insights_news/splash.dart';
 
@@ -16,7 +17,9 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return BlocProvider(
+      create: (context) => NewsCubit(),
+      child: MaterialApp(
         theme: ThemeData(
           scaffoldBackgroundColor: AppColors.background,
           appBarTheme: AppBarTheme(
@@ -46,7 +49,7 @@ class MainApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         home: const SplashView(),
-      );
-    
+      ),
+    );
   }
 }

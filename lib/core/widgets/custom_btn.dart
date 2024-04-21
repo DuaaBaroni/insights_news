@@ -28,6 +28,9 @@ class CustomButton extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10))),
             onPressed: onPressed,
-            child: Text(text, style: getBodyStyle(),)));
+            child: Text(
+              text,
+              style: getBodyStyle(),
+            )));
   }
 }

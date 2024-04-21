@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:insights_news/core/utils/colors.dart';
 
-
 TextStyle getTitleStyle(
     {Color? color, double? fontSize, FontWeight? fontWeight}) {
   return TextStyle(
@@ -26,7 +25,7 @@ TextStyle getBodyStyle(
 TextStyle getSmallStyle(
     {Color? color, double? fontSize, FontWeight? fontWeight}) {
   return TextStyle(
-    fontFamily: GoogleFonts.inter ().fontFamily,
+    fontFamily: GoogleFonts.inter().fontFamily,
     color: color ?? AppColors.grey,
     fontSize: fontSize ?? 14,
     fontWeight: fontWeight ?? FontWeight.normal,

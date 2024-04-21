@@ -1,4 +1,3 @@
-
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/material.dart';
 
@@ -12,8 +11,6 @@ class SourceView extends StatefulWidget {
 class _SourceViewState extends State<SourceView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-
-    );
+    return Scaffold();
   }
 }
