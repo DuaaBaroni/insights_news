@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
-
+import 'package:insights_news/core/functions/navigate.dart';
 import 'package:insights_news/core/utils/colors.dart';
 import 'package:insights_news/core/utils/style.dart';
 import 'package:insights_news/features/controller/news_cubit.dart';
 import 'package:insights_news/features/controller/news_state.dart';
+import 'package:insights_news/features/views/Home/prersentation/view/news_details.dart';
 
 
 class NewsListBuilder extends StatefulWidget {
@@ -37,7 +38,7 @@ class _NewsListBuilderState extends State<NewsListBuilder> {
             itemBuilder: (BuildContext context, int index) {
               return InkWell(
                 onTap: () async {
-                //  navigateTo(context, NewsDetailsView(model: news![index]));
+                  navigateTo(context, NewsDetailsView(model: news![index]));
                 },
                 child: Container(
                   height: 100,
@@ -75,7 +76,7 @@ class _NewsListBuilderState extends State<NewsListBuilder> {
                               news?[index].title ?? '',
                               maxLines: 3,
                               overflow: TextOverflow.ellipsis,
-                              style: getTitleStyle(color: AppColors.white,fontSize: 16),
+                              style: getBodyStyle(fontSize: 14),
                             ),
                             Row(
                               children: [

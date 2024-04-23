@@ -7,7 +7,7 @@ import 'package:insights_news/core/functions/navigate.dart';
 import 'package:insights_news/core/services/local_storage.dart';
 import 'package:insights_news/core/utils/colors.dart';
 import 'package:insights_news/core/utils/style.dart';
-import 'package:insights_news/features/view/profile/presentation/view/profile_view.dart';
+import 'package:insights_news/features/views/Profile/prersentation/view/profile.dart';
 
 class HomeHeader extends StatefulWidget {
   const HomeHeader({

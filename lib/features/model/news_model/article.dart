@@ -8,7 +8,7 @@ class Article {
   String? url;
   String? urlToImage;
   String? publishedAt;
-  String? content;
+  dynamic content;
 
   Article({
     this.source,
@@ -19,8 +19,8 @@ class Article {
     this.urlToImage,
     this.publishedAt,
     this.content,
-  });
-  
+  }
+  );
   factory Article.fromJson(Map<String, dynamic> json) => Article(
         source: json['source'] == null
             ? null
@@ -31,9 +31,8 @@ class Article {
         url: json['url'] as String?,
         urlToImage: json['urlToImage'] as String?,
         publishedAt: json['publishedAt'] as String?,
-        content: json['content'] as String?,
+        content: json['content'] as dynamic,
       );
-
   Map<String, dynamic> toJson() => {
         'source': source?.toJson(),
         'author': author,
@@ -43,5 +42,7 @@ class Article {
         'urlToImage': urlToImage,
         'publishedAt': publishedAt,
         'content': content,
-      };
+    };
 }
+
+

@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:insights_news/core/utils/colors.dart';
 import 'package:insights_news/core/utils/style.dart';
-import 'package:insights_news/features/view/home/presentation/widgets/home_header.dart';
-import 'package:insights_news/features/view/home/presentation/widgets/new_list.dart';
+import 'package:insights_news/features/views/Home/prersentation/widgets/home_header.dart';
+import 'package:insights_news/features/views/Home/prersentation/widgets/news_list.dart';
 
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -35,7 +35,7 @@ class _HomeViewState extends State<HomeView> {
                       'assets/slider.png',
                       height: 200,
                     );
-                  },
+                },
                   itemCount: 5,
                   options: CarouselOptions(
                     height: 200,

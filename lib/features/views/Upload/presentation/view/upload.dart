@@ -4,13 +4,15 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:insights_news/core/constants/assets.dart';
-import 'package:insights_news/core/functions/custom_diolog.dart';
+import 'package:insights_news/core/constsnts/assets.dart';
+import 'package:insights_news/core/functions/custom_dilog.dart';
+
 import 'package:insights_news/core/functions/navigate.dart';
 import 'package:insights_news/core/services/local_storage.dart';
 import 'package:insights_news/core/utils/colors.dart';
 import 'package:insights_news/core/utils/style.dart';
-import 'package:insights_news/core/widgets/custom_btn.dart';
+import 'package:insights_news/core/widgets/custom_tn.dart';
+
 import 'package:insights_news/core/widgets/nav_bar.dart';
 
 String? path;
@@ -101,7 +103,7 @@ class _UploadViewState extends State<UploadView> {
                     prefixIcon: Icon(Icons.person, color: AppColors.green),
                     hintText: "Enter Your UserName",
                     hintStyle: getBodyStyle()
-                    //labelText: "", labelStyle: TextStyle(color: Colors.white),
+                    
                     ),
               ),
             ],

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:insights_news/core/services/local_storage.dart';
 import 'package:insights_news/core/utils/colors.dart';
+import 'package:insights_news/core/widgets/nav_bar.dart';
 import 'package:insights_news/features/controller/news_cubit.dart';
 
 import 'package:insights_news/splash.dart';

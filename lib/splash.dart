@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:insights_news/core/functions/navigate.dart';
@@ -5,7 +7,8 @@ import 'package:insights_news/core/services/local_storage.dart';
 import 'package:insights_news/core/utils/colors.dart';
 import 'package:insights_news/core/utils/style.dart';
 import 'package:insights_news/core/widgets/nav_bar.dart';
-import 'package:insights_news/features/view/upload/presentation/view/upload_view.dart';
+import 'package:insights_news/features/views/Upload/presentation/view/upload.dart';
+
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -16,24 +19,24 @@ class SplashView extends StatefulWidget {
 
 class _SplashViewState extends State<SplashView> {
   @override
-  void initState() {
+ void initState() {
     bool isUpload = AppLocalStorage.getCacheData('isUpload') ?? false;
-
+  
     Future.delayed(const Duration(seconds: 3), () {
       navigateWithReplacment(
-          context, isUpload ? const NavBarWidget() : UploadView());
+          context, isUpload ? const NavBarWidget() :  UploadView());
     });
     super.initState();
-  }
+ }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
       body: Center(
           child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+         
           Image.asset('assets/splash.png'),
           const Gap(10),
           Text(
