@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:http/http.dart' as http;
 import 'package:insights_news/core/constsnts/constants.dart';
 import 'package:insights_news/features/model/news_model/news_model.dart';
+import 'package:insights_news/features/model/source_model/source_model.dart';
 
 class ApiServices {
   static Future<NewsModel?> getNewsByCategory(String category) async {
@@ -21,7 +22,7 @@ class ApiServices {
     }
     return null;
   }
-    
+  
     // by search 
       static Future<NewsModel?> getNewsBySearch(String query) async {
     try {
@@ -39,19 +40,34 @@ class ApiServices {
     return null;
   }
 //
- static Future<NewsModel?> getNewsBySource(String source) async {
+//  static Future<NewsModel?> getNewsBySources(String source) async {
+//     try {
+//       var url = Uri.parse(
+//           '${ApiConstants.baseUrl + ApiConstants.topHeadLines}?sources=$source&${ApiConstants.apiKey}');
+//       var res = await http.get(url);
+//       if (res.statusCode == 200) {
+//         NewsModel model = NewsModel.fromJson(json.decode(res.body));
+//         return model;
+//       }
+//     } catch (e) {
+//       log(e.toString());
+//     }
+//     return null;
+//   }
+
+ static Future <SourceModel?> getNewsBySources() async {
     try {
       var url = Uri.parse(
-          '${ApiConstants.baseUrl + ApiConstants.topHeadLines}?sources=$source&${ApiConstants.apiKey}');
+          '${ApiConstants.baseUrl + ApiConstants.sources}?apiKey=${ApiConstants.apiKey}');
       var res = await http.get(url);
-      if (res.statusCode == 200) {
-        NewsModel model = NewsModel.fromJson(json.decode(res.body));
-        return model;
+      if(res.statusCode == 200){
+          SourceModel model = SourceModel.fromJson(json.decode(res.body));
+          return model ;
       }
     } catch (e) {
       log(e.toString());
     }
-    return null;
+    return null ;
   }
 
 
@@ -88,11 +104,6 @@ static Future<NewsModel?> getNewsByCategoryImageGeneral() async {
     }
     return null;
   }
-
-
-
-
-
 }
 
 

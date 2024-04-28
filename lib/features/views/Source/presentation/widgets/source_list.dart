@@ -19,13 +19,13 @@ class _SourceListViewState extends State<SourceListView> {
   @override
   void initState() {
     super.initState();
- //context.read<NewsCubit>().getNewsBySource();
+ context.read<NewsCubit>().getNewsBySource();
   }
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<NewsCubit, NewsState>(
       builder: (context, state) {
-        if (state is NewsBySourceSuccessState) {
+        if (state is NewsBySourcessSucessState) {
           var source = state.sources.sources;
           return ListView.builder(
             itemCount: source?.length,
@@ -36,8 +36,8 @@ class _SourceListViewState extends State<SourceListView> {
                   navigateTo(context, NewsSourceListBuilder(id: source![index].id !,));
                 },
                 child: Container(
-                  height: 75,
-            
+                  height: 70,
+                  width:150,
                  margin: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                       color: AppColors.cardColor,
@@ -60,7 +60,7 @@ class _SourceListViewState extends State<SourceListView> {
               );
             },
           );
-        } else if (state is NewsBySourceErrorState) {
+        } else if (state is NewsBySourcesErrorState) {
           return Center(
             child: Text(
               'An error occurred!',
@@ -69,7 +69,7 @@ class _SourceListViewState extends State<SourceListView> {
           );
         } else {
           return  Center(
-              child: CircularProgressIndicator(color: AppColors.green,)
+              child: CircularProgressIndicator(color: AppColors.green ,)
               );
         }
       },

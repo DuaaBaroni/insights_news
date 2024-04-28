@@ -1,3 +1,4 @@
+// ignore_for_file: unused_import
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:insights_news/core/services/api_services.dart';
 import 'package:insights_news/features/controller/news_state.dart';
@@ -18,8 +19,8 @@ class NewsCubit extends Cubit<NewsState> {
     }
   }
 
-//by search 
- getNewsBySearch(String query) {
+//by search
+  getNewsBySearch(String query) {
     emit(NewsBySearchLoadingState());
     try {
       ApiServices.getNewsBySearch(query).then((value) {
@@ -30,32 +31,32 @@ class NewsCubit extends Cubit<NewsState> {
     }
   }
 
-
   // by source
-   getNewsBySource(String source) {
-    emit(NewsBySourceLoadingState());
+
+getNewsBySource (){
+    emit(NewsBySourcessLoadingState());
+    try{
+      ApiServices.getNewsBySources().then((value){
+        emit(NewsBySourcessSucessState(sources: value!));
+      } ) ;
+    }catch(e){    emit(NewsBySourcesErrorState());
+}
+  }
+
+// news by source
+  getArticlesBySource(String sourceId) {
+    emit(ArticlesBySourcesLoadingState());
     try {
-      ApiServices.getNewsBySource(source).then((value) {
-        emit(NewsBySourceSuccessState(value!));
+      ApiServices.getArticlesBySources(sourceId).then((value) {
+        emit(ArticlesBySourcesSucessState(model: value!));
       });
     } catch (e) {
-      emit(NewsBySourceErrorState());
+      emit(ArticlesBySourcesErrorState());
     }
   }
 
-// news by sorce 
-  getArticlesBySource (String sourceId){
-    emit(ArticlesBySourcesLoadingState());
-    try{
-      ApiServices.getArticlesBySources(sourceId).then((value){
-        emit(ArticlesBySourcesSucessState(model: value!));
-      } ) ;
-    }catch(e){
-    emit(ArticlesBySourcesErrorState());
-}
-  }
- // img by category
-   getNewsImageByCategory() {
+  // img by category
+  getNewsImageByCategory() {
     emit(NewsImageByCategoryLoadingState());
 
     try {
@@ -66,18 +67,5 @@ class NewsCubit extends Cubit<NewsState> {
       emit(NewsImageByCategoryErrorState());
     }
   }
-
 }
- 
-
-
-
-
-
-
-
-
-
-
- 
 

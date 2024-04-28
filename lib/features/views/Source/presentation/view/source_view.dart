@@ -1,4 +1,8 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
+import 'package:insights_news/features/views/Source/presentation/widgets/articles_details.dart';
+import 'package:insights_news/features/views/Source/presentation/widgets/news_builder.dart';
 import 'package:insights_news/features/views/Source/presentation/widgets/source_list.dart';
 
 
@@ -22,7 +26,11 @@ class _SourceViewState extends State<SourceView> {
         padding:  EdgeInsets.all(20),
         child: Column(
           children: [
-          Expanded(child: SourceListView()),
+         // Expanded(child: 
+          SourceListView(),
+        // ArticlesListBuilder()
+          
+          //),
         ],),
       )
        

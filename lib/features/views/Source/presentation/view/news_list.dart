@@ -3,8 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:insights_news/features/controller/news_cubit.dart';
 import 'package:insights_news/features/views/Source/presentation/widgets/news_builder.dart';
 
-
-
 class NewsSourceListBuilder extends StatefulWidget {
   const NewsSourceListBuilder({
     super.key,
@@ -32,7 +30,8 @@ class _NewsSourceListBuilderState extends State<NewsSourceListBuilder> {
         child: Padding(
           padding:  EdgeInsets.all(20),
           child: Column( children: [
-            Expanded(child: ArticlesListBuilder()),
+            Expanded(child: 
+            ArticlesListBuilder()),
           ],),
         ),
       ) 

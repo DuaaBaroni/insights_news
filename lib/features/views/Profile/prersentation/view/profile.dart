@@ -1,17 +1,14 @@
 // ignore_for_file: use_build_context_synchronously, prefer_const_constructors
 
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:insights_news/core/functions/navigate.dart';
-
 import 'package:insights_news/core/services/local_storage.dart';
 import 'package:insights_news/core/utils/colors.dart';
 import 'package:insights_news/core/utils/style.dart';
 import 'package:insights_news/core/widgets/custom_tn.dart';
-
 import 'package:insights_news/core/widgets/nav_bar.dart';
 
 class ProfileView extends StatefulWidget {

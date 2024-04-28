@@ -1,4 +1,5 @@
 
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
@@ -7,9 +8,10 @@ import 'package:insights_news/core/utils/colors.dart';
 import 'package:insights_news/core/utils/style.dart';
 import 'package:insights_news/features/controller/news_cubit.dart';
 import 'package:insights_news/features/controller/news_state.dart';
+import 'package:insights_news/features/views/Source/presentation/widgets/articles_details.dart';
 
 
-//
+
 class ArticlesListBuilder extends StatelessWidget {
   const ArticlesListBuilder({super.key, });
   @override
@@ -25,7 +27,11 @@ class ArticlesListBuilder extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 return InkWell(
                   onTap: () {
-                  
+                    navigateTo(
+                        context,
+                        ArticlesDetails(
+                          newsArticle: model![index],
+                        ));
                   },
                   child: Container(
                     margin: const EdgeInsets.symmetric(vertical: 8),

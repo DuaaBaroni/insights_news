@@ -5,6 +5,6 @@ class ApiConstants {
   static String baseUrl = "https://newsapi.org";
   static String topHeadLines = "/v2/top-headlines";
   static String sources = "sources";
-  static String apiKey = "93e87aa99c6e4886b45cbf93165689ef";
+  static String apiKey = "apiKey=93e87aa99c6e4886b45cbf93165689ef";
 }
 

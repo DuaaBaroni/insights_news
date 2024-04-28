@@ -1,4 +1,5 @@
 import 'package:insights_news/features/model/news_model/news_model.dart';
+import 'package:insights_news/features/model/source_model/source_model.dart';
 
 class NewsState {}
 
@@ -28,19 +29,20 @@ class NewsBySearchSuccessState extends NewsState {
 class NewsBySearchErrorState extends NewsState {}
 
 // NewsBysource
-  class NewsBySourceLoadingState extends NewsState {}
+ 
+   class NewsBySourcessLoadingState extends NewsState {}
 
-class NewsBySourceSuccessState extends NewsState {
-  final NewsModel model;
+class NewsBySourcessSucessState extends NewsState {
+  final SourceModel sources;
 
-  NewsBySourceSuccessState(this.model);
-
-  get sources => null;
+  NewsBySourcessSucessState({required this.sources});
 }
 
-class NewsBySourceErrorState extends NewsState {}
+class NewsBySourcesErrorState extends NewsState {}
+  
 
-// 
+
+// Articles
  class ArticlesBySourcesLoadingState extends NewsState {}
 
 class ArticlesBySourcesSucessState extends NewsState {

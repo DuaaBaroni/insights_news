@@ -64,7 +64,7 @@ class NewsListSearchView extends StatelessWidget {
                               news?[index].title ?? '',
                               maxLines: 3,
                               overflow: TextOverflow.ellipsis,
-                              style: getTitleStyle(fontSize: 14),
+                              style: getTitleStyle(fontSize: 14, color: AppColors.white),
                             ),
                             Row(
                               children: [

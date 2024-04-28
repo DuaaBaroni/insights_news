@@ -29,13 +29,14 @@ class _HomeViewState extends State<HomeView> {
             child: Column(
               children: [
                 const HomeHeader(),
+                const Gap(7),
                 CarouselSlider.builder(
                   itemBuilder: (context, index, realIndex) {
                     return Image.asset(
                       'assets/slider.png',
                       height: 200,
                     );
-                },
+                  },
                   itemCount: 5,
                   options: CarouselOptions(
                     height: 200,
